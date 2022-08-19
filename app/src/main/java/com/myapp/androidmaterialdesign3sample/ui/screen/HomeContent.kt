@@ -7,6 +7,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import com.myapp.androidmaterialdesign3sample.ui.NavigationScreens
+import com.myapp.androidmaterialdesign3sample.ui.component.UtilButton
+import com.myapp.androidmaterialdesign3sample.ui.theme.ColorType
 
 @ExperimentalMaterial3Api
 @Composable
@@ -18,8 +20,16 @@ fun HomeScreen(navController: NavHostController) {
 @Composable
 fun HomeContent(navController: NavHostController) {
     Column {
-        Button(onClick = { navController.navigate(NavigationScreens.COLOR_DETAILS_SCREEN.route) }) {
-            Text(text = "色について")
-        }
+        UtilButton(
+            text = "色について",
+            colorType = ColorType.PRIMARY,
+            onClick = { navController.navigate(NavigationScreens.COLOR_DETAILS_SCREEN.route) },
+           )
+
+        UtilButton(
+            text = "文字について",
+            colorType = ColorType.PRIMARY,
+            onClick = { navController.navigate(NavigationScreens.FONT_DETAILS_SCREEN.route) }
+        )
     }
 }

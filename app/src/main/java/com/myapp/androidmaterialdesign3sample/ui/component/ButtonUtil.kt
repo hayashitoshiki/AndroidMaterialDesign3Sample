@@ -13,14 +13,18 @@ import com.myapp.androidmaterialdesign3sample.ui.theme.ColorType
  * @param colorType
  */
 @Composable
-fun UtilButton(text: String, colorType: ColorType) {
+fun UtilButton(
+    text: String,
+    colorType: ColorType,
+    onClick: () -> Unit
+) {
     Button(
         colors = ButtonDefaults.textButtonColors(
             containerColor = colorType.getColor(),
             contentColor =  colorType.getOnColor()
         ),
-        onClick = { /*TODO*/ }) {
-        Text(text = text)
+        onClick = { onClick() }) {
+        LabelTextL(text = text)
     }
 }
 
@@ -47,7 +51,7 @@ fun UtilFilter(
         enabled = enabled,
         selected = selected,
         onClick = onClick,
-        label = { Text(text = label) }
+        label = { LabelTextS(text = label) }
     )
 }
 

@@ -9,11 +9,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.myapp.androidmaterialdesign3sample.R
-import com.myapp.androidmaterialdesign3sample.ui.component.UtilButton
-import com.myapp.androidmaterialdesign3sample.ui.component.UtilFilter
+import com.myapp.androidmaterialdesign3sample.ui.component.*
 import com.myapp.androidmaterialdesign3sample.ui.theme.ColorType
 
 @ExperimentalMaterial3Api
@@ -26,15 +24,9 @@ fun ColorDetailsScreen(navController: NavHostController) {
 @Composable
 fun ColorDetailsContent(navController: NavHostController) {
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-        Text(
-            fontSize = 18.sp,
-            text = "色について"
-        )
-        Text(
-            fontSize = 18.sp,
-            text = "色の分類"
-        )
-        Text(
+        HeadLineTextM(text = "色について")
+        TitleTextM(text = "色の分類")
+        BodyTextM(
             text = "配色は主に下記のように分類されます。\n"+
                     "　1.プライマリ(Primary)\n" +
                     "　2.セカンダリ(Secondary)\n" +
@@ -51,12 +43,10 @@ fun ColorDetailsContent(navController: NavHostController) {
             contentDescription = "",
         )
 
-        Text(
-            fontSize = 18.sp,
+        TitleTextM(
             text = "Primary"
         )
-        Text(
-            fontSize = 12.sp,
+        BodyTextM(
             text = "Primaryは主に下記に使用されます。\n"+
                     "　1.FABボタン（FAB)\n" +
                     "　2.選択肢（CheckBox,RadioButton)\n" +
@@ -66,41 +56,27 @@ fun ColorDetailsContent(navController: NavHostController) {
                     "　6.竜騎した表面状態)\n"
         )
 
-        Text(
-            fontSize = 18.sp,
-            text = "Secondary"
-        )
-        Text(
-            fontSize = 12.sp,
+        TitleTextM(text = "Secondary")
+        BodyTextM(
             text = "Secondaryは主に下記に使用されます。\n"+
                     "　1.フィルタ（Chips)\n" +
                     "　2. フッター(BottomNavigation)"
         )
 
-        Text(
-            fontSize = 18.sp,
-            text = "Tertiary"
-        )
-        Text(
-            fontSize = 12.sp,
+        TitleTextM(text = "Tertiary")
+        BodyTextM(
             text = "Tertiaryは主に下記に使用されます。\n"+
                     "　1.アクセントとして注目させたいもの（Button)\n"
         )
 
-        Text(
-            fontSize = 18.sp,
-            text = "Button一覧"
-        )
-        Column() {
+        TitleTextM(text = "Button一覧")
+        Column {
             ColorType.values().forEach {
-                UtilButton(it.name, it)
+                UtilButton(it.name, it) {}
             }
         }
 
-        Text(
-            fontSize = 18.sp,
-            text = "Filterサンプル"
-        )
+        TitleTextM(text = "Filterサンプル")
         UtilFilter(
             selected = true,
             label = "選択状態"
@@ -115,12 +91,8 @@ fun ColorDetailsContent(navController: NavHostController) {
             label = "非活性状態"
         ){}
 
-        Text(
-            fontSize = 18.sp,
-            text = "色の実装方法"
-        )
-        Text(
-            fontSize = 14.sp,
+        TitleTextM(text = "色の実装方法")
+        BodyTextM(
             text = "色を実装するときは下記のリンクから色を選択して「Color.kt」「Theme.kt」を貼り付けてください。\n" +
                     "https://m3.material.io/theme-builder#/custom"
         )

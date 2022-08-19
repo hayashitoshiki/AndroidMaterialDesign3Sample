@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.myapp.androidmaterialdesign3sample.R
 import com.myapp.androidmaterialdesign3sample.ui.screen.ColorDetailsScreen
+import com.myapp.androidmaterialdesign3sample.ui.screen.FontDetailsScreen
 import com.myapp.androidmaterialdesign3sample.ui.screen.HomeScreen
 
 /**
@@ -22,7 +23,7 @@ enum class NavigationScreens(
 ) {
     HOME_SCREEN("home_route", R.string.navigation_title_home),
     COLOR_DETAILS_SCREEN("color_details_route", R.string.navigation_title_color_details),
-
+    FONT_DETAILS_SCREEN("font_details_route", R.string.navigation_title_font_details)
 }
 
 /**
@@ -41,5 +42,7 @@ fun AppNavHost(
     ) {
         composable(route = NavigationScreens.HOME_SCREEN.route) { HomeScreen(navController) }
         composable(route = NavigationScreens.COLOR_DETAILS_SCREEN.route) { ColorDetailsScreen(navController) }
+        composable(route = NavigationScreens.FONT_DETAILS_SCREEN.route) { FontDetailsScreen(navController) }
+
     }
 }

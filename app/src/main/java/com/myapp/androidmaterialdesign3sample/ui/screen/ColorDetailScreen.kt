@@ -72,7 +72,7 @@ fun ColorDetailsContent(navController: NavHostController) {
         TitleTextM(text = "Button一覧")
         Column {
             ColorType.values().forEach {
-                UtilButton(it.name, it) {}
+                UtilButton(text = it.name, colorType = it) {}
             }
         }
 

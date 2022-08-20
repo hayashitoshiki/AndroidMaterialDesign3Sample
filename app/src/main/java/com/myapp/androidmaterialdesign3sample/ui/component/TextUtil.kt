@@ -7,6 +7,7 @@ package com.myapp.androidmaterialdesign3sample.ui.component
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
 
 @Composable
@@ -34,8 +35,9 @@ fun DisplayTextS(text: String) {
 }
 
 @Composable
-fun HeadLineTextL(text: String) {
+fun HeadLineTextL(text: String, color: Color = Color.Unspecified) {
     Text(
+        color = color,
         style = MaterialTheme.typography.headlineLarge,
         text = text
     )

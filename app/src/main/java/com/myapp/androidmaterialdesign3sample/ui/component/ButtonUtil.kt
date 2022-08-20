@@ -14,11 +14,13 @@ import com.myapp.androidmaterialdesign3sample.ui.theme.ColorType
  */
 @Composable
 fun UtilButton(
+    modifier: Modifier = Modifier,
     text: String,
     colorType: ColorType,
     onClick: () -> Unit
 ) {
     Button(
+        modifier = modifier,
         colors = ButtonDefaults.textButtonColors(
             containerColor = colorType.getColor(),
             contentColor =  colorType.getOnColor()

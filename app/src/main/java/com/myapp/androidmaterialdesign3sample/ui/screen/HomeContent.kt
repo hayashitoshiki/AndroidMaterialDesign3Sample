@@ -25,7 +25,7 @@ fun HomeScreen(navController: NavHostController) {
 @ExperimentalMaterial3Api
 @Composable
 fun HomeContent(navController: NavHostController) {
-    Column(modifier = Modifier.padding(8.dp).verticalScroll(rememberScrollState())) {
+    Column(modifier = Modifier.padding(horizontal = 16.dp).verticalScroll(rememberScrollState())) {
         HeadLineTextL(
             color =ColorType.TERTIARY.getColor(),
             text = "Material Design3"
@@ -45,7 +45,7 @@ fun HomeContent(navController: NavHostController) {
                         .fillMaxWidth()
                         .padding(8.dp)
                 ) {
-                    TitleTextM(text = "色について")
+                    TitleTextM(text = "Color")
                     Spacer(modifier = Modifier.size(8.dp))
                     FilledButtonUtil(
                         modifier = Modifier.align(Alignment.End),
@@ -66,7 +66,7 @@ fun HomeContent(navController: NavHostController) {
                         .fillMaxWidth()
                         .padding(8.dp)
                 ) {
-                    TitleTextM(text = "文字について")
+                    TitleTextM(text = "Typography")
                     Spacer(modifier = Modifier.size(8.dp))
                     FilledButtonUtil(
                         modifier = Modifier.align(alignment = Alignment.End),
@@ -87,7 +87,7 @@ fun HomeContent(navController: NavHostController) {
                         .fillMaxWidth()
                         .padding(8.dp)
                 ) {
-                    TitleTextM(text = "カードについて")
+                    TitleTextM(text = "Card")
                     Spacer(modifier = Modifier.size(8.dp))
                     FilledButtonUtil(
                         modifier = Modifier.align(alignment = Alignment.End),
@@ -109,7 +109,7 @@ fun HomeContent(navController: NavHostController) {
                         .fillMaxWidth()
                         .padding(8.dp)
                 ) {
-                    TitleTextM(text = "ボタンについて")
+                    TitleTextM(text = "Button")
                     Spacer(modifier = Modifier.size(8.dp))
                     FilledButtonUtil(
                         modifier = Modifier.align(alignment = Alignment.End),

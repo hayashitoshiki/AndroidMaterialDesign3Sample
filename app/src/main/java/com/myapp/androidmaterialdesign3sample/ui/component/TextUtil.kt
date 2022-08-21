@@ -14,11 +14,13 @@ import androidx.compose.ui.graphics.Color
 @Composable
 fun DisplayTextL(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.displayLarge,
+        color = color,
         text = text
     )
 }
@@ -26,11 +28,13 @@ fun DisplayTextL(
 @Composable
 fun DisplayTextM(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.displayMedium,
+        color = color,
         text = text
     )
 }
@@ -38,11 +42,13 @@ fun DisplayTextM(
 @Composable
 fun DisplayTextS(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.displaySmall,
+        color = color,
         text = text
     )
 }
@@ -64,11 +70,13 @@ fun HeadLineTextL(
 @Composable
 fun HeadLineTextM(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.headlineMedium,
+        color = color,
         text = text
     )
 }
@@ -76,11 +84,13 @@ fun HeadLineTextM(
 @Composable
 fun HeadLineTextS(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.headlineSmall,
+        color = color,
         text = text
     )
 }
@@ -88,11 +98,13 @@ fun HeadLineTextS(
 @Composable
 fun TitleTextL(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.titleLarge,
+        color = color,
         text = text
     )
 }
@@ -100,11 +112,13 @@ fun TitleTextL(
 @Composable
 fun TitleTextM(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.titleMedium,
+        color = color,
         text = text
     )
 }
@@ -112,11 +126,13 @@ fun TitleTextM(
 @Composable
 fun TitleTextS(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.titleSmall,
+        color = color,
         text = text
     )
 }
@@ -124,11 +140,13 @@ fun TitleTextS(
 @Composable
 fun BodyTextL(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.bodyLarge,
+        color = color,
         text = text
     )
 }
@@ -136,11 +154,13 @@ fun BodyTextL(
 @Composable
 fun BodyTextM(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.bodyMedium,
+        color = color,
         text = text
     )
 }
@@ -148,11 +168,13 @@ fun BodyTextM(
 @Composable
 fun BodyTextS(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.bodySmall,
+        color = color,
         text = text
     )
 }
@@ -160,11 +182,13 @@ fun BodyTextS(
 @Composable
 fun LabelTextL(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.labelLarge,
+        color = color,
         text = text
     )
 }
@@ -172,11 +196,13 @@ fun LabelTextL(
 @Composable
 fun LabelTextM(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.labelMedium,
+        color = color,
         text = text
     )
 }
@@ -184,11 +210,13 @@ fun LabelTextM(
 @Composable
 fun LabelTextS(
     modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
     text: String
 ) {
     Text(
         modifier = modifier,
         style = MaterialTheme.typography.labelSmall,
+        color = color,
         text = text
     )
 }

@@ -29,7 +29,7 @@ fun ButtonOverviewContent(navController: NavHostController) {
             .padding(8.dp)
             .verticalScroll(rememberScrollState())
     ) {
-        HeadLineTextM(text = "ボタンについて")
+        HeadLineTextM(text = "概要")
         Spacer(modifier = Modifier.size(8.dp))
         TitleTextM(text = "ボタンの種類")
         BodyTextM(

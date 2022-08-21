@@ -1,10 +1,16 @@
 package com.myapp.androidmaterialdesign3sample.ui.component
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 
 
 @Composable
@@ -197,4 +203,71 @@ enum class FabColor {
             SECONDARY -> MaterialTheme.colorScheme.onSecondaryContainer
             TERTIARY -> MaterialTheme.colorScheme.onTertiaryContainer
         }
+}
+
+
+@Composable
+fun SegmentedControl(
+    items: List<String>,
+    selectedIndex: MutableState<Int>
+) {
+    Row(
+        modifier = Modifier
+    ) {
+        items.forEachIndexed { index, item ->
+            OutlinedButton(
+                modifier = when (index) {
+                    0 -> {
+                        Modifier
+                            .height(40.dp)
+                            .wrapContentWidth()
+                            .offset(0.dp, 0.dp)
+                            .zIndex(if (selectedIndex.value == index) 1f else 0f)
+                    } else -> {
+                        Modifier
+                            .height(40.dp)
+                            .wrapContentWidth()
+                            .offset((-1 * index).dp, 0.dp)
+                            .zIndex(if (selectedIndex.value == index) 1f else 0f)
+                    }
+                },
+                onClick = { selectedIndex.value = index },
+                shape = when (index) {
+                    0 -> RoundedCornerShape(
+                            topStartPercent = 100,
+                        topEndPercent = 0,
+                        bottomStartPercent = 100,
+                        bottomEndPercent = 0
+                    )
+                    items.size - 1 -> RoundedCornerShape(
+                        topStartPercent = 0,
+                        topEndPercent = 100,
+                        bottomStartPercent = 0,
+                        bottomEndPercent = 100
+                    )
+                    else -> RoundedCornerShape(
+                        topStartPercent = 0,
+                        topEndPercent = 0,
+                        bottomStartPercent = 0,
+                        bottomEndPercent = 0
+                    )
+                },
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+                colors = if (selectedIndex.value == index) {
+                    ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
+                } else {
+                    ButtonDefaults.outlinedButtonColors(containerColor = Color.Transparent)
+                },
+            ) {
+                LabelTextL(
+                    text = item,
+                    color = if (selectedIndex.value == index) {
+                        MaterialTheme.colorScheme.onSecondaryContainer
+                    } else {
+                        MaterialTheme.colorScheme.onSurface
+                    },
+                )
+            }
+        }
+    }
 }

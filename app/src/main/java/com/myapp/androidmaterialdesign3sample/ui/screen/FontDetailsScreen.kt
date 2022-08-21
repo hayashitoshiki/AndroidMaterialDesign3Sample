@@ -22,7 +22,7 @@ fun FontDetailsScreen(navController: NavHostController) {
 @ExperimentalMaterial3Api
 @Composable
 fun FontDetailsContent(navController: NavHostController) {
-    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+    Column(modifier = Modifier.padding(horizontal = 16.dp).verticalScroll(rememberScrollState())) {
         HeadLineTextL(text = "文字について")
 
         Column(modifier = Modifier.padding(8.dp)) {

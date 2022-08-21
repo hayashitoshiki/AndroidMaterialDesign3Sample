@@ -23,7 +23,7 @@ fun CardDetailsScreen(navController: NavHostController) {
 @ExperimentalMaterial3Api
 @Composable
 fun CardDetailsContent(navController: NavHostController) {
-    Column(modifier = Modifier.padding(8.dp).verticalScroll(rememberScrollState())) {
+    Column(modifier = Modifier.padding(horizontal = 16.dp).verticalScroll(rememberScrollState())) {
         HeadLineTextM(text = "カードについて")
         TitleTextM(text = "カードの分類")
         BodyTextM(

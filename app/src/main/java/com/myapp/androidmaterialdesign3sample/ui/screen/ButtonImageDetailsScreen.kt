@@ -7,6 +7,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -22,6 +24,9 @@ fun ButtonImageDetailsScreen(navController: NavHostController) {
 @ExperimentalMaterial3Api
 @Composable
 fun ButtonImageDetailsContent(navController: NavHostController) {
+    val selected = remember { mutableStateOf(0) }
+    val item = listOf("One", "Two", "Three")
+
     Column(
         modifier = Modifier
             .padding(8.dp)
@@ -38,11 +43,10 @@ fun ButtonImageDetailsContent(navController: NavHostController) {
             FilledTonalButtonUtil(text = "FilledTonalButton", onClick = {})
             OutlinedButtonUtil(text = "OutlinedButton", onClick = {})
             TextButtonUtil(text = "TextButton", onClick = {})
-            Spacer(modifier = Modifier.size(8.dp))
             IconButtonUtil(onClick = {}, icons = Icons.Filled.Favorite)
             FloatingActionButtonUtil(icons = Icons.Filled.Favorite, onClick = {})
-            Spacer(modifier = Modifier.size(8.dp))
             ExtendedFloatingActionButtonUtil(text = "Extended FAB", icons = Icons.Filled.Favorite, onClick = {})
+            SegmentedControl(items = item, selectedIndex = selected)
         }
         Spacer(modifier = Modifier.size(16.dp))
 

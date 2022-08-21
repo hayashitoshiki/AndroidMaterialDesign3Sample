@@ -25,7 +25,7 @@ fun ColorDetailsScreen(navController: NavHostController) {
 @ExperimentalMaterial3Api
 @Composable
 fun ColorDetailsContent(navController: NavHostController) {
-    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+    Column(modifier = Modifier.padding(horizontal = 16.dp).verticalScroll(rememberScrollState())) {
         HeadLineTextM(text = "色について")
         TitleTextM(text = "色の分類")
         BodyTextM(

@@ -1,7 +1,8 @@
 package com.myapp.androidmaterialdesign3sample.ui.screen
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -9,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.myapp.androidmaterialdesign3sample.R
 import com.myapp.androidmaterialdesign3sample.ui.component.*
@@ -53,7 +55,7 @@ fun ColorDetailsContent(navController: NavHostController) {
                     "　3.バー（SneakBar)\n" +
                     "　4. 目立たせたいボタン(Button)" +
                     "　5.アクティブ状態（FAB)\n" +
-                    "　6.竜騎した表面状態)\n"
+                    "　6.隆起した表面状態)\n"
         )
 
         TitleTextM(text = "Secondary")
@@ -69,27 +71,19 @@ fun ColorDetailsContent(navController: NavHostController) {
                     "　1.アクセントとして注目させたいもの（Button)\n"
         )
 
-        TitleTextM(text = "Button一覧")
+        TitleTextM(text = "現在の定義色一覧")
         Column {
             ColorType.values().forEach {
-                UtilButton(text = it.name, colorType = it) {}
+                Box(
+                    modifier = Modifier
+                        .width(300.dp)
+                        .height(100.dp)
+                        .background(it.getColor())
+                ) {
+                    Text(color = it.getOnColor(), text = it.name)
+                }
             }
         }
-
-        TitleTextM(text = "Filterサンプル")
-        UtilFilter(
-            selected = true,
-            label = "選択状態"
-        ){}
-        UtilFilter(
-            selected = false,
-            label = "非選択状態"
-        ){}
-        UtilFilter(
-            enabled = false,
-            selected = false,
-            label = "非活性状態"
-        ){}
 
         TitleTextM(text = "色の実装方法")
         BodyTextM(

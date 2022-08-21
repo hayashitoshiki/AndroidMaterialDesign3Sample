@@ -12,9 +12,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.myapp.androidmaterialdesign3sample.R
-import com.myapp.androidmaterialdesign3sample.ui.NavigationScreens
 import com.myapp.androidmaterialdesign3sample.ui.component.*
-import com.myapp.androidmaterialdesign3sample.ui.theme.ColorType
 
 @ExperimentalMaterial3Api
 @Composable
@@ -35,9 +33,7 @@ fun CardDetailsContent(navController: NavHostController) {
                     "　3.OutlinedCard\n"
         )
 
-        TitleTextM(
-            text = "カードのイメージ"
-        )
+        TitleTextM(text = "カードのイメージ")
         val modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
@@ -54,11 +50,10 @@ fun CardDetailsContent(navController: NavHostController) {
                     HeadLineTextS(text = "FilledCard")
                     TitleTextM(text = "サブタイトルです")
                     BodyTextM(text = "本文です")
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(Alignment.End),
                         text = "ボタンです",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { },
+                        onClick = { }
                     )
                 }
             }
@@ -75,11 +70,10 @@ fun CardDetailsContent(navController: NavHostController) {
                     HeadLineTextS(text = "ElevatedCard")
                     TitleTextM(text = "サブタイトルです")
                     BodyTextM(text = "本文です")
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(Alignment.End),
                         text = "ボタンです",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { },
+                        onClick = { }
                     )
                 }
             }
@@ -96,11 +90,10 @@ fun CardDetailsContent(navController: NavHostController) {
                     HeadLineTextS(text = "OutlinedCard")
                     TitleTextM(text = "サブタイトルです")
                     BodyTextM(text = "本文です")
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(Alignment.End),
                         text = "ボタンです",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { },
+                        onClick = { }
                     )
                 }
             }

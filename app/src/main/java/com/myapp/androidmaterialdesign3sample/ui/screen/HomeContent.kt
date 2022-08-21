@@ -47,11 +47,10 @@ fun HomeContent(navController: NavHostController) {
                 ) {
                     TitleTextM(text = "色について")
                     Spacer(modifier = Modifier.size(8.dp))
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(Alignment.End),
                         text = "詳細へ",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { navController.navigate(NavigationScreens.COLOR_DETAILS_SCREEN.route) },
+                        onClick = { navController.navigate(NavigationScreens.COLOR_DETAILS_SCREEN.route) }
                     )
                 }
             }
@@ -69,11 +68,10 @@ fun HomeContent(navController: NavHostController) {
                 ) {
                     TitleTextM(text = "文字について")
                     Spacer(modifier = Modifier.size(8.dp))
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(alignment = Alignment.End),
                         text = "詳細へ",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { navController.navigate(NavigationScreens.FONT_DETAILS_SCREEN.route) },
+                        onClick = { navController.navigate(NavigationScreens.FONT_DETAILS_SCREEN.route) }
                     )
                 }
             }
@@ -91,11 +89,32 @@ fun HomeContent(navController: NavHostController) {
                 ) {
                     TitleTextM(text = "カードについて")
                     Spacer(modifier = Modifier.size(8.dp))
-                    UtilButton(
+                    FilledButtonUtil(
                         modifier = Modifier.align(alignment = Alignment.End),
                         text = "詳細へ",
-                        colorType = ColorType.PRIMARY,
-                        onClick = { navController.navigate(NavigationScreens.CARD_DETAILS_SCREEN.route) },
+                        onClick = { navController.navigate(NavigationScreens.CARD_DETAILS_SCREEN.route) }
+                    )
+                }
+            }
+        }
+
+        FilledCardUtil(modifier = modifier) {
+            Column {
+                Image(
+                    painter = painterResource(R.drawable.img_button_details),
+                    contentDescription = "",
+                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp)
+                ) {
+                    TitleTextM(text = "ボタンについて")
+                    Spacer(modifier = Modifier.size(8.dp))
+                    FilledButtonUtil(
+                        modifier = Modifier.align(alignment = Alignment.End),
+                        text = "詳細へ",
+                        onClick = { navController.navigate(NavigationScreens.BUTTON_DETAILS_SCREEN.route) }
                     )
                 }
             }

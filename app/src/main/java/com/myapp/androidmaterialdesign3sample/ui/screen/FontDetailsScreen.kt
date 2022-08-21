@@ -90,13 +90,13 @@ fun FontDetailsContent(navController: NavHostController) {
         }
 
         Column(modifier = Modifier.padding(8.dp)) {
-            TitleTextL("小サイズコンテンツ文字サイズ")
+            TitleTextL(text = "小サイズコンテンツ文字サイズ")
 
-            DisplayTextS("DisplayText")
-            HeadLineTextS("HeadLineText")
-            TitleTextS("TitleText")
-            BodyTextS("BodyText")
-            LabelTextS("LabelText")
+            DisplayTextS(text = "DisplayText")
+            HeadLineTextS(text = "HeadLineText")
+            TitleTextS(text = "TitleText")
+            BodyTextS(text = "BodyText")
+            LabelTextS(text = "LabelText")
         }
     }
 }

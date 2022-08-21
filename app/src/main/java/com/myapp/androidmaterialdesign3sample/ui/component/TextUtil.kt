@@ -7,36 +7,54 @@ package com.myapp.androidmaterialdesign3sample.ui.component
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 
 @Composable
-fun DisplayTextL(text: String) {
+fun DisplayTextL(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.displayLarge,
         text = text
     )
 }
 
 @Composable
-fun DisplayTextM(text: String) {
+fun DisplayTextM(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.displayMedium,
         text = text
     )
 }
 
 @Composable
-fun DisplayTextS(text: String) {
+fun DisplayTextS(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.displaySmall,
         text = text
     )
 }
 
 @Composable
-fun HeadLineTextL(text: String, color: Color = Color.Unspecified) {
+fun HeadLineTextL(
+    modifier: Modifier = Modifier,
+    text: String,
+    color: Color = Color.Unspecified
+) {
     Text(
+        modifier = modifier,
         color = color,
         style = MaterialTheme.typography.headlineLarge,
         text = text
@@ -44,88 +62,132 @@ fun HeadLineTextL(text: String, color: Color = Color.Unspecified) {
 }
 
 @Composable
-fun HeadLineTextM(text: String) {
+fun HeadLineTextM(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.headlineMedium,
         text = text
     )
 }
 
 @Composable
-fun HeadLineTextS(text: String) {
+fun HeadLineTextS(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.headlineSmall,
         text = text
     )
 }
 
 @Composable
-fun TitleTextL(text: String) {
+fun TitleTextL(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.titleLarge,
         text = text
     )
 }
 
 @Composable
-fun TitleTextM(text: String) {
+fun TitleTextM(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.titleMedium,
         text = text
     )
 }
 
 @Composable
-fun TitleTextS(text: String) {
+fun TitleTextS(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.titleSmall,
         text = text
     )
 }
 
 @Composable
-fun BodyTextL(text: String) {
+fun BodyTextL(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.bodyLarge,
         text = text
     )
 }
 
 @Composable
-fun BodyTextM(text: String) {
+fun BodyTextM(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.bodyMedium,
         text = text
     )
 }
 
 @Composable
-fun BodyTextS(text: String) {
+fun BodyTextS(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.bodySmall,
         text = text
     )
 }
 
 @Composable
-fun LabelTextL(text: String) {
+fun LabelTextL(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.labelLarge,
         text = text
     )
 }
 
 @Composable
-fun LabelTextM(text: String) {
+fun LabelTextM(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.labelMedium,
         text = text
     )
 }
 
 @Composable
-fun LabelTextS(text: String) {
+fun LabelTextS(
+    modifier: Modifier = Modifier,
+    text: String
+) {
     Text(
+        modifier = modifier,
         style = MaterialTheme.typography.labelSmall,
         text = text
     )

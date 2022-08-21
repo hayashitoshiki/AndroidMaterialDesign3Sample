@@ -5,4 +5,8 @@
     <string name="navigation_title_color_details">色詳細</string>
     <string name="navigation_title_font_details">文字詳細</string>
     <string name="navigation_title_card_details">カード詳細</string>
+    <string name="navigation_title_button_details">ボタン詳細</string>
+    <string name="navigation_title_button_overview_details">ボタン概要</string>
+    <string name="navigation_title_button_image_details">ボタンイメージ詳細</string>
+    <string name="navigation_title_text_button_details">テキストボタン詳細</string>
 </resources>
